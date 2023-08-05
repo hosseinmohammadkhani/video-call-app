@@ -22,7 +22,7 @@ io.on("connection" , socket => {
 
     //Listens to "login" event sent by client
     socket.on("login" , data => {
-        onlineUsers[socket.id] = data.username //key and value are strings
+        onlineUsers[socket.id] = data.username
         io.emit("online-users" , onlineUsers)
     })
     
